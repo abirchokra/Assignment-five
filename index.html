@@ -37,13 +37,14 @@
             <button id="history-btn"
                 class="md:px-12 px-6 text-xl py-4 rounded-lg  text-gray-500 border border-gray-300 font-bold">History</button>
         </div>
+
         <div id="card">
             <!-- card section one start -->
-            <div class="md:flex border-2 border-gray-300 rounded-lg space-y-3 md:space-x-10 p-6 my-6 shadow-lg">
+            <div class="md:flex border-2 border-gray-300 rounded-lg space-y-3  md:space-x-10 p-6 my-6 shadow-lg">
                 <div class="md:w-[50%]">
                     <img class="w-full" src="assets/noakhali.png" alt="">
                 </div>
-                <div class="md:w-[50%] pr-16 flex flex-col justify-center space-y-6">
+                <div class="md:w-[50%] pr-16 flex flex-col justify-center space-y-6 relative">
                     <div class="flex bg-gray-100 p-3 w-[180px] space-x-2 items-center rounded-lg">
                         <img src="assets/coin.png" alt="">
                         <h2 class="text-2xl font-bold text-gray-500 space-x-1"><span
@@ -64,7 +65,18 @@
                     <br>
                     <button id="noakhali-btn" class="bg-lime-400 w-full rounded-lg py-3 text-xl font-bold">Donate
                         Now</button>
+                    <!-- congratulation start -->
+                    <div id="Congrates-noa" class="hidden flex flex-col justify-center items-center space-y-6 bg-white rounded-xl shadow-lg  p-3 absolute w-[500px] h-[300px] right-[400px] top-[70px]">
+                        <h2 class="text-3xl font-bold">Congrates!</h2>
+                        <img src="assets/coin.png" alt="">
+                        <p>You Have Donated for Humankind</p>
+                        <h3 class="font-bold text-xl">Successfully</h3>
+                        <button id="close-noa" class="bg-gray-200 p-5 text-center rounded-lg">Close confirmation</button>
+                    </div>
+                    <!-- congratulation end -->
                 </div>
+
+
             </div>
 
 
@@ -74,7 +86,7 @@
                 <div class="md:w-[50%]">
                     <img class="w-full" src="assets/feni.png" alt="">
                 </div>
-                <div class="md:w-[50%] pr-16 flex flex-col justify-center space-y-6">
+                <div class="md:w-[50%] pr-16 flex flex-col justify-center space-y-6 relative">
                     <div class="flex bg-gray-100 p-3 w-[180px] space-x-2 items-center rounded-lg">
                         <img src="assets/coin.png" alt="">
                         <h2 class="text-2xl font-bold text-gray-500 space-x-1"><span
@@ -94,6 +106,15 @@
                     <br>
                     <button id="feni-btn" class="bg-lime-400 w-full rounded-lg py-3 text-xl font-bold">Donate
                         Now</button>
+                         <!-- congratulation start -->
+                    <div id="Congrates-feni" class="hidden flex flex-col justify-center items-center space-y-6 bg-white rounded-xl shadow-lg  p-3 absolute w-[500px] h-[300px] right-[400px] top-[120px]">
+                        <h2 class="text-3xl font-bold">Congrates!</h2>
+                        <img src="assets/coin.png" alt="">
+                        <p>You Have Donated for Humankind</p>
+                        <h3 class="font-bold text-xl">Successfully</h3>
+                        <button id="close-feni" class="bg-gray-200 p-5 text-center rounded-lg">Close confirmation</button>
+                    </div>
+                    <!-- congratulation end -->
                 </div>
             </div>
             <!-- card section two end -->
@@ -102,7 +123,7 @@
                 <div class="md:w-[50%]">
                     <img class="w-full" src="assets/quota-protest.png" alt="">
                 </div>
-                <div class="md:w-[50%] pr-16 flex flex-col justify-center space-y-6">
+                <div class="md:w-[50%] pr-16 flex flex-col justify-center space-y-6 relative">
                     <div class="flex bg-gray-100 p-3 w-[180px] space-x-2 items-center rounded-lg">
                         <img src="assets/coin.png" alt="">
                         <h2 class="text-2xl font-bold text-gray-500 space-x-1"><span
@@ -122,6 +143,15 @@
                     <br>
                     <button id="quota-btn" class="bg-lime-400 w-full rounded-lg py-3 text-xl font-bold">Donate
                         Now</button>
+                         <!-- congratulation start -->
+                    <div id="Congrates-quota" class="hidden flex flex-col justify-center items-center space-y-6 bg-white rounded-xl shadow-lg  p-3 absolute w-[500px] h-[300px] right-[400px] top-[90px]">
+                        <h2 class="text-3xl font-bold">Congrates!</h2>
+                        <img src="assets/coin.png" alt="">
+                        <p>You Have Donated for Humankind</p>
+                        <h3 class="font-bold text-xl">Successfully</h3>
+                        <button id="close-quota" class="bg-gray-200 p-5 text-center rounded-lg">Close confirmation</button>
+                    </div>
+                    <!-- congratulation end -->
                 </div>
             </div>
             <!-- card section three end -->
@@ -132,21 +162,8 @@
         <!-- history button section start -->
 
         <!-- history div start-->
-        <div class="hidden space-y-4 ">
-            <div class="border border-gray-300 rounded-lg p-4">
-                <h2 class="font-bold text-xl"></h2>
-                <p class="text-gray-500 text-lg"></p>
-            </div>
+        <div id="history-section" class="hidden space-y-4 my-10">
 
-            <div class="border border-gray-300 rounded-lg p-4">
-                <h2 class="font-bold text-xl"></h2>
-                <p class="text-gray-500 text-lg"></p>
-            </div>
-
-            <div class="border border-gray-300 rounded-lg p-4">
-                <h2 class="font-bold text-xl"></h2>
-                <p class="text-gray-500 text-lg"></p>
-            </div>
         </div>
 
         <!-- history div  end -->
@@ -154,7 +171,7 @@
     </main>
     <!-- main done -->
     <footer>
-        <div class="bg-amber-50 h-[200px] mt-7"></div>
+        <div id="footer-section" class="bg-amber-50 h-[200px] mt-7"></div>
     </footer>
     <!-- footer done -->
     <script src="js/utilities.js"></script>

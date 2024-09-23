@@ -3,8 +3,7 @@ function getInputValue (id){
     const inputValueNumber = parseFloat(inputValue);
     return inputValueNumber;
 }
-// function getTextValue (id){
-//     const textValue = document.getElementById(id).innerText;
-    
-//     return textValue;
-// }
+function getTextValue(id){
+    const textValue = document.getElementById(id).innerText;
+    return textValue;
+}
