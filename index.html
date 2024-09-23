@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+</head>
+
+<body>
+    <header class="mx-auto">
+        <!-- nav bar section -->
+        <nav class="flex justify-around items-center bg-amber-50 py-6 shadow-lg">
+            <button id="blog-btn" class="btn bg-lime-400 md:text-2xl px-7">Blog</button>
+            <div class="flex items-center space-x-3">
+                <img class="w-10" src="assets/logo.png" alt="">
+                <h1 class="md:text-3xl font-semibold">Digital Bangladesh</h1>
+            </div>
+            <div class="flex items-center space-x-3">
+                <img src="assets/coin.png" alt="">
+                <h2 class="md:text-2xl font-bold text-gray-500 space-x-1 "><span
+                        id="my-balance">5000</span><span>BDT</span></h2>
+            </div>
+        </nav>
+    </header>
+    <!-- header done -->
+    <main class="max-w-[1500px]  mx-auto my-5">
+        <!-- button section -->
+        <div class="text-center md:space-x-6">
+            <button id="donation-btn"
+                class="border border-gray-300 bg-lime-400 md:px-12 px-6 py-4 rounded-lg text-xl font-bold">Donation</button>
+            <button id="history-btn"
+                class="md:px-12 px-6 text-xl py-4 rounded-lg  text-gray-500 border border-gray-300 font-bold">History</button>
+        </div>
+        <div id="card">
+            <!-- card section one start -->
+            <div class="md:flex border-2 border-gray-300 rounded-lg space-y-3 md:space-x-10 p-6 my-6 shadow-lg">
+                <div class="md:w-[50%]">
+                    <img class="w-full" src="assets/noakhali.png" alt="">
+                </div>
+                <div class="md:w-[50%] pr-16 flex flex-col justify-center space-y-6">
+                    <div class="flex bg-gray-100 p-3 w-[180px] space-x-2 items-center rounded-lg">
+                        <img src="assets/coin.png" alt="">
+                        <h2 class="text-2xl font-bold text-gray-500 space-x-1"><span
+                                id="noakhali-amount">0</span><span>BDT</span></h2>
+
+                    </div>
+                    <h2 class="text-2xl font-bold">Donate For Flood at Noakhali, Bangladesh</h2>
+                    <p class="text-xl text-gray-500"> The recent floods in Noakhali have caused significant damage to
+                        homes
+                        infrastructure. Your donation
+                        will help provide essential supplies and to those affected by this disaster. Every contribution,
+                        big
+                        or small, makes difference. Please join us in supporting the relief efforts and making a
+                        positive
+                        impact on the lives of those in need.</p>
+                    <input id="noakhali-input" class="border border-gray-300 p-4 rounded-lg outline-none" type="text"
+                        placeholder="Write Donation Amount">
+                    <br>
+                    <button id="noakhali-btn" class="bg-lime-400 w-full rounded-lg py-3 text-xl font-bold">Donate
+                        Now</button>
+                </div>
+            </div>
+
+
+            <!-- card section one end -->
+            <!-- card section two start -->
+            <div class="md:flex border-2 border-gray-300 rounded-lg space-y-3 md:space-x-10 p-6 my-8 shadow-lg">
+                <div class="md:w-[50%]">
+                    <img class="w-full" src="assets/feni.png" alt="">
+                </div>
+                <div class="md:w-[50%] pr-16 flex flex-col justify-center space-y-6">
+                    <div class="flex bg-gray-100 p-3 w-[180px] space-x-2 items-center rounded-lg">
+                        <img src="assets/coin.png" alt="">
+                        <h2 class="text-2xl font-bold text-gray-500 space-x-1"><span
+                                id="feni-amount">0</span><span>BDT</span></h2>
+
+                    </div>
+                    <h2 class="text-2xl font-bold">Donate For Flood at Feni, Bangladesh</h2>
+                    <p class="text-xl text-gray-500"> The recent floods in Feni have caused significant damage to homes
+                        infrastructure. Your donation
+                        will help provide essential supplies and to those affected by this disaster. Every contribution,
+                        big
+                        or small, makes difference. Please join us in supporting the relief efforts and making a
+                        positive
+                        impact on the lives of those in need.</p>
+                    <input id="feni-input" class="border border-gray-300 p-4 rounded-lg outline-none" type="text"
+                        placeholder="Write Donation Amount">
+                    <br>
+                    <button id="feni-btn" class="bg-lime-400 w-full rounded-lg py-3 text-xl font-bold">Donate
+                        Now</button>
+                </div>
+            </div>
+            <!-- card section two end -->
+            <!-- card section three start -->
+            <div class="md:flex border-2 border-gray-300 rounded-lg space-y-3 md:space-x-10 p-6 my-8 shadow-lg">
+                <div class="md:w-[50%]">
+                    <img class="w-full" src="assets/quota-protest.png" alt="">
+                </div>
+                <div class="md:w-[50%] pr-16 flex flex-col justify-center space-y-6">
+                    <div class="flex bg-gray-100 p-3 w-[180px] space-x-2 items-center rounded-lg">
+                        <img src="assets/coin.png" alt="">
+                        <h2 class="text-2xl font-bold text-gray-500 space-x-1"><span
+                                id="quota-amount">0</span><span>BDT</span></h2>
+
+                    </div>
+                    <h2 class="text-2xl font-bold">Aid for Injured in the Quota Movement</h2>
+                    <p class="text-xl text-gray-500"> The recent Quota movement has resulted in numerous injuries and
+                        significant hardship for many individuals. Your support is crucial in providing medical
+                        assistance,
+                        rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that
+                        injured individuals receive the care and support they need during this challenging time. Every
+                        donation plays a vital role in alleviating their suffering and aiding in their recovery. Please
+                        consider making a donation to support these brave individuals in their time of need.</p>
+                    <input id="quota-input" class="border border-gray-300 p-4 rounded-lg outline-none" type="text"
+                        placeholder="Write Donation Amount">
+                    <br>
+                    <button id="quota-btn" class="bg-lime-400 w-full rounded-lg py-3 text-xl font-bold">Donate
+                        Now</button>
+                </div>
+            </div>
+            <!-- card section three end -->
+
+        </div>
+
+
+        <!-- history button section start -->
+
+        <!-- history div start-->
+        <div class="hidden space-y-4 ">
+            <div class="border border-gray-300 rounded-lg p-4">
+                <h2 class="font-bold text-xl"></h2>
+                <p class="text-gray-500 text-lg"></p>
+            </div>
+
+            <div class="border border-gray-300 rounded-lg p-4">
+                <h2 class="font-bold text-xl"></h2>
+                <p class="text-gray-500 text-lg"></p>
+            </div>
+
+            <div class="border border-gray-300 rounded-lg p-4">
+                <h2 class="font-bold text-xl"></h2>
+                <p class="text-gray-500 text-lg"></p>
+            </div>
+        </div>
+
+        <!-- history div  end -->
+
+    </main>
+    <!-- main done -->
+    <footer>
+        <div class="bg-amber-50 h-[200px] mt-7"></div>
+    </footer>
+    <!-- footer done -->
+    <script src="js/utilities.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
