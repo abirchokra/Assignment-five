@@ -46,7 +46,7 @@ document.getElementById('noakhali-btn').addEventListener('click', function () {
     const myBalanceElement = document.getElementById('my-balance');
     const myBalance = parseFloat(myBalanceElement.innerText);
     const historyNew = document.createElement('div');
-    historyNew.className = 'border border-gray-400 rounded-lg shadow-lg p-4 h-[150px] flex flex-col justify-center space-y-3';
+    historyNew.className = 'border border-gray-400 rounded-lg shadow-lg p-4 h-[150px] flex flex-col justify-center space-y-3 mx-4 md:mx-0';
     
     const historyDiv = document.getElementById('history-section');
 
@@ -85,7 +85,7 @@ document.getElementById('feni-btn').addEventListener('click', function () {
     const myBalanceElement = document.getElementById('my-balance');
     const myBalance = parseFloat(myBalanceElement.innerText);
     const historyNew = document.createElement('div');
-    historyNew.className = 'border border-gray-400 rounded-lg shadow-lg p-4 h-[150px] flex flex-col justify-center space-y-3';
+    historyNew.className = 'border border-gray-400 rounded-lg shadow-lg p-4 h-[150px] flex flex-col justify-center space-y-3 mx-4 md:mx-0';
     
     const historyDiv = document.getElementById('history-section');
 
@@ -125,7 +125,7 @@ document.getElementById('quota-btn').addEventListener('click', function () {
     const myBalanceElement = document.getElementById('my-balance');
     const myBalance = parseFloat(myBalanceElement.innerText);
     const historyNew = document.createElement('div');
-    historyNew.className = 'border border-gray-400 rounded-lg shadow-lg p-4 h-[150px] flex flex-col justify-center space-y-3';
+    historyNew.className = 'border border-gray-400 rounded-lg shadow-lg p-4 h-[150px] flex flex-col justify-center space-y-3 mx-4 md:mx-0';
     
     const historyDiv = document.getElementById('history-section');
 
