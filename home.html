@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,57 +8,75 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body>
     <header class="mx-auto"></header>
-        <!-- nav bar section -->
-        <nav class="flex justify-around items-center bg-amber-50 py-6 shadow-lg">
-            <button id="blog-btn" class="btn bg-lime-400 md:text-2xl px-7">Blog</button>
-            <div class="flex items-center space-x-3">
-                <img class="w-10" src="assets/logo.png" alt="">
-                <h1 class="md:text-3xl font-semibold">Digital Bangladesh</h1>
-            </div>
-            <div class="flex items-center space-x-3">
-                <img src="assets/coin.png" alt="">
-                <h2 class="md:text-2xl font-bold text-gray-500 space-x-1 "><span
-                        id="my-balance">5000</span><span>BDT</span></h2>
-            </div>
-        </nav>
+   
+    <nav class="flex justify-around items-center bg-amber-50 py-6 shadow-lg fixed top-0 left-0 right-0 z-[1000]">
+        <button id="blog-btn" class="btn bg-lime-400 md:text-2xl px-7">Blog</button>
+        <div class="flex items-center space-x-3">
+            <img class="w-10" src="assets/logo.png" alt="">
+            <h1 class="md:text-3xl font-semibold">Digital Bangladesh</h1>
+        </div>
+        <div class="flex items-center space-x-3">
+            <img src="assets/coin.png" alt="">
+            <h2 class="md:text-2xl font-bold text-gray-500 space-x-1 "><span id="my-balance">5000</span><span>BDT</span>
+            </h2>
+        </div>
+    </nav>
     </header>
-    <main>
-        <div class="border-2 border-gray-400 md:w-[1200px] mx-auto space-y-4 p-5 md:my-8 shadow-2xl rounded-lg">
+    <main class="mt-[130px] ">
+        <div class="border-2 border-gray-400 md:w-[1200px] md:mx-auto space-y-4 p-5 md:my-8 shadow-2xl rounded-lg mx-5 ">
             <h2 class="text-2xl font-bold">What is the Document Object Model (DOM)?</h2>
             <p class="text-lg text-gray-600">
-                <span class="text-red-500 text-xl font-bold">Ans: </span>The Document Object Model (DOM) is a programming interface for web documents. It represents the structure of an HTML or XML document as a tree of objects. Each part of the document—such as elements, attributes, and text—is represented as a node in this tree, allowing programming languages like JavaScript to interact with and modify the document dynamically.
+                <span class="text-red-500 text-xl font-bold">Ans: </span>The Document Object Model (DOM) is a
+                programming interface for web documents. It represents the structure of an HTML or XML document as a
+                tree of objects. Each part of the document—such as elements, attributes, and text—is represented as a
+                node in this tree, allowing programming languages like JavaScript to interact with and modify the
+                document dynamically.
             </p>
 
             <h2 class="text-2xl font-bold">How do select an element from the DOM?</h2>
-            <p class="text-lg text-gray-600"> <span class="text-red-500 text-xl font-bold">Ans: </span>To select an element from the DOM, can use JavaScript methods that allow to target specific elements based on their tag, class, ID, or other attributes.
-                <ul>
-                    <li class="text-lg text-gray-600">By ID: document.getElementById()</li>
-                    <li class="text-lg text-gray-600">By Class: document.getElementsByClassName()
+            <p class="text-lg text-gray-600"> <span class="text-red-500 text-xl font-bold">Ans: </span>To select an
+                element from the DOM, can use JavaScript methods that allow to target specific elements based on their
+                tag, class, ID, or other attributes.
+            <ul>
+                <li class="text-lg text-gray-600">By ID: document.getElementById()</li>
+                <li class="text-lg text-gray-600">By Class: document.getElementsByClassName()
 
-                    </li>
-                    <li class="text-lg text-gray-600">By Tag: document.getElementsByTagName()
+                </li>
+                <li class="text-lg text-gray-600">By Tag: document.getElementsByTagName()
 
-                    </li>
-                    <li class="text-lg text-gray-600">CSS Selector (Single): document.querySelector()</li>
-                    <li class="text-lg text-gray-600">CSS Selector (Multiple): document.querySelectorAll()</li>
-                </ul>
+                </li>
+                <li class="text-lg text-gray-600">CSS Selector (Single): document.querySelector()</li>
+                <li class="text-lg text-gray-600">CSS Selector (Multiple): document.querySelectorAll()</li>
+            </ul>
             </p>
 
-            <h2 class="text-2xl font-bold">What is event delegation in the context of the DOM, and why is it useful?</h2>
-            <p class="text-lg text-gray-600"> <span class="text-red-500 text-xl font-bold">Ans: </span>Event delegation is a technique in the DOM where a single event listener is added to a parent element to handle events for its child elements. Instead of attaching individual event listeners to multiple child elements, the event is captured at the parent level and then delegated to the target child element through event propagation (bubbling).</p>
+            <h2 class="text-2xl font-bold">What is event delegation in the context of the DOM, and why is it useful?
+            </h2>
+            <p class="text-lg text-gray-600"> <span class="text-red-500 text-xl font-bold">Ans: </span>Event delegation
+                is a technique in the DOM where a single event listener is added to a parent element to handle events
+                for its child elements. Instead of attaching individual event listeners to multiple child elements, the
+                event is captured at the parent level and then delegated to the target child element through event
+                propagation (bubbling).</p>
             <h2 class="text-2xl font-bold">How do manipulate an element's attributes and styles using the DOM?</h2>
             <ul>
                 <span class="text-red-500 text-xl font-bold">Ans: </span>
-                <li class="text-lg text-gray-600">Attributes: Use getAttribute(), setAttribute(), removeAttribute() to work with attributes.</li>
-                <li class="text-lg text-gray-600">Inline Styles: Use the style property to modify inline styles directly.</li>
-                <li class="text-lg text-gray-600">CSS Classes: Use classList to add, remove, or toggle classes efficiently.</li>
+                <li class="text-lg text-gray-600">Attributes: Use getAttribute(), setAttribute(), removeAttribute() to
+                    work with attributes.</li>
+                <li class="text-lg text-gray-600">Inline Styles: Use the style property to modify inline styles
+                    directly.</li>
+                <li class="text-lg text-gray-600">CSS Classes: Use classList to add, remove, or toggle classes
+                    efficiently.</li>
             </ul>
+
         </div>
+
     </main>
     <script src="js/utilities.js"></script>
     <script src="js/index.js"></script>
     <script src="js/home.js"></script>
 </body>
+
 </html>

@@ -40,38 +40,38 @@ document.getElementById('noakhali-btn').addEventListener('click', function () {
     const inputValue = getInputValue('noakhali-input');
     const congrats = document.getElementById('Congrates-noa');
 
-   
-    
+
+
     const textValue = document.getElementById('noakhali-amount');
     const myBalanceElement = document.getElementById('my-balance');
     const myBalance = parseFloat(myBalanceElement.innerText);
     const historyNew = document.createElement('div');
     historyNew.className = 'border border-gray-400 rounded-lg shadow-lg p-4 h-[150px] flex flex-col justify-center space-y-3 mx-4 md:mx-0';
-    
+
     const historyDiv = document.getElementById('history-section');
 
     const currentDateTime = new Date();
 
-    // Format the date and time
     const formattedDate = currentDateTime.toLocaleDateString();
     const formattedTime = currentDateTime.toLocaleTimeString();
-    historyNew.innerHTML = `
-        
-        <h2 class='text-xl font-bold'> ${inputValue.toFixed(2)} Taka is Donated for famine-2024 at Noakhali, Bangladesh</h2>
-        <p>Date: ${formattedDate} ${formattedTime} GMT +0600 (Bangladesh Standard Time)</p>
-       
-    
-    
-    `
-    historyDiv.insertBefore(historyNew, historyDiv.firstChild);
+
 
     if (isNaN(inputValue) || inputValue < 0) {
-        alert('Put a valid amount number')
+        alert('Put a valid amount number');
     } else if (myBalance >= inputValue) {
         textValue.innerText = inputValue.toFixed(2);
         const currentBalance = myBalance - inputValue;
         myBalanceElement.innerText = currentBalance.toFixed(2);
         congrats.classList.remove('hidden');
+        historyNew.innerHTML = `
+        
+        <h2 class='text-xl font-bold'> ${inputValue.toFixed(2)} Taka is Donated for famine-2024 at Noakhali, Bangladesh</h2>
+        <p class='text-gray-500'>Date: ${formattedDate} ${formattedTime} GMT +0600 (Bangladesh Standard Time)</p>
+       
+    
+    
+    `
+        historyDiv.insertBefore(historyNew, historyDiv.firstChild);
 
     } else {
         alert('You do not have enough money to donate');
@@ -86,18 +86,17 @@ document.getElementById('feni-btn').addEventListener('click', function () {
     const myBalance = parseFloat(myBalanceElement.innerText);
     const historyNew = document.createElement('div');
     historyNew.className = 'border border-gray-400 rounded-lg shadow-lg p-4 h-[150px] flex flex-col justify-center space-y-3 mx-4 md:mx-0';
-    
+
     const historyDiv = document.getElementById('history-section');
 
     const currentDateTime = new Date();
 
-    // Format the date and time
     const formattedDate = currentDateTime.toLocaleDateString();
     const formattedTime = currentDateTime.toLocaleTimeString();
     historyNew.innerHTML = `
         
         <h2 class='text-xl font-bold'> ${inputValue.toFixed(2)} Taka is Donated for famine-2024 at Feni, Bangladesh</h2>
-        <p>Date: ${formattedDate} ${formattedTime} GMT +0600 (Bangladesh Standard Time)</p>
+        <p class='text-gray-500'>Date: ${formattedDate} ${formattedTime} GMT +0600 (Bangladesh Standard Time)</p>
         
     
     
@@ -105,7 +104,7 @@ document.getElementById('feni-btn').addEventListener('click', function () {
     historyDiv.insertBefore(historyNew, historyDiv.firstChild);
 
     if (isNaN(inputValue) || inputValue < 0) {
-        alert('Put a valid amount number')
+        alert('Put a valid amount number');
     } else if (myBalance >= inputValue) {
         textValue.innerText = inputValue.toFixed(2);
         const currentBalance = myBalance - inputValue;
@@ -126,23 +125,24 @@ document.getElementById('quota-btn').addEventListener('click', function () {
     const myBalance = parseFloat(myBalanceElement.innerText);
     const historyNew = document.createElement('div');
     historyNew.className = 'border border-gray-400 rounded-lg shadow-lg p-4 h-[150px] flex flex-col justify-center space-y-3 mx-4 md:mx-0';
-    
+
     const historyDiv = document.getElementById('history-section');
 
     const currentDateTime = new Date();
 
-    // Format the date and time
     const formattedDate = currentDateTime.toLocaleDateString();
     const formattedTime = currentDateTime.toLocaleTimeString();
+    const warning = document.getElementById('alert');
     historyNew.innerHTML = `
         
         <h2 class='text-xl font-bold'> ${inputValue.toFixed(2)} Taka is Donated for famine-2024 at Quota Movement, Bangladesh</h2>
-        <p>Date: ${formattedDate} ${formattedTime} GMT +0600 (Bangladesh Standard Time)</p>
+        <p class='text-gray-500'>Date: ${formattedDate} ${formattedTime} GMT +0600 (Bangladesh Standard Time)</p>
         
     
     
     `
     historyDiv.insertBefore(historyNew, historyDiv.firstChild);
+
 
     if (isNaN(inputValue) || inputValue < 0) {
         alert('Put a valid amount number')
@@ -154,6 +154,8 @@ document.getElementById('quota-btn').addEventListener('click', function () {
 
     } else {
         alert('You do not have enough money to donate');
+
+
     }
 
 })
@@ -166,15 +168,15 @@ document.getElementById('blog-btn').addEventListener('click', function () {
 })
 
 
-document.getElementById('close-noa').addEventListener('click', function(){
+document.getElementById('close-noa').addEventListener('click', function () {
     const congrats = document.getElementById('Congrates-noa');
     congrats.classList.add('hidden');
 })
-document.getElementById('close-feni').addEventListener('click', function(){
+document.getElementById('close-feni').addEventListener('click', function () {
     const congrats = document.getElementById('Congrates-feni');
     congrats.classList.add('hidden');
 })
-document.getElementById('close-quota').addEventListener('click', function(){
+document.getElementById('close-quota').addEventListener('click', function () {
     const congrats = document.getElementById('Congrates-quota');
     congrats.classList.add('hidden');
 })
