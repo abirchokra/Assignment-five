@@ -46,7 +46,7 @@ document.getElementById('noakhali-btn').addEventListener('click', function () {
     const myBalanceElement = document.getElementById('my-balance');
     const myBalance = parseFloat(myBalanceElement.innerText);
     const historyNew = document.createElement('div');
-    historyNew.className = 'border border-gray-400 rounded-lg shadow-lg p-4 h-[150px] flex flex-col justify-center space-y-3 mx-4 md:mx-0';
+   
 
     const historyDiv = document.getElementById('history-section');
 
@@ -63,6 +63,7 @@ document.getElementById('noakhali-btn').addEventListener('click', function () {
         const currentBalance = myBalance - inputValue;
         myBalanceElement.innerText = currentBalance.toFixed(2);
         congrats.classList.remove('hidden');
+        historyNew.className = 'border border-gray-400 rounded-lg shadow-lg p-4 h-[150px] flex flex-col justify-center space-y-3 mx-4 md:mx-0';
         historyNew.innerHTML = `
         
         <h2 class='text-xl font-bold'> ${inputValue.toFixed(2)} Taka is Donated for famine-2024 at Noakhali, Bangladesh</h2>
@@ -85,7 +86,7 @@ document.getElementById('feni-btn').addEventListener('click', function () {
     const myBalanceElement = document.getElementById('my-balance');
     const myBalance = parseFloat(myBalanceElement.innerText);
     const historyNew = document.createElement('div');
-    historyNew.className = 'border border-gray-400 rounded-lg shadow-lg p-4 h-[150px] flex flex-col justify-center space-y-3 mx-4 md:mx-0';
+
 
     const historyDiv = document.getElementById('history-section');
 
@@ -93,14 +94,7 @@ document.getElementById('feni-btn').addEventListener('click', function () {
 
     const formattedDate = currentDateTime.toLocaleDateString();
     const formattedTime = currentDateTime.toLocaleTimeString();
-    historyNew.innerHTML = `
-        
-        <h2 class='text-xl font-bold'> ${inputValue.toFixed(2)} Taka is Donated for famine-2024 at Feni, Bangladesh</h2>
-        <p class='text-gray-500'>Date: ${formattedDate} ${formattedTime} GMT +0600 (Bangladesh Standard Time)</p>
-        
     
-    
-    `
     historyDiv.insertBefore(historyNew, historyDiv.firstChild);
 
     if (isNaN(inputValue) || inputValue < 0) {
@@ -110,6 +104,15 @@ document.getElementById('feni-btn').addEventListener('click', function () {
         const currentBalance = myBalance - inputValue;
         myBalanceElement.innerText = currentBalance.toFixed(2);
         congrats.classList.remove('hidden');
+        historyNew.className = 'border border-gray-400 rounded-lg shadow-lg p-4 h-[150px] flex flex-col justify-center space-y-3 mx-4 md:mx-0';
+        historyNew.innerHTML = `
+        
+        <h2 class='text-xl font-bold'> ${inputValue.toFixed(2)} Taka is Donated for famine-2024 at Feni, Bangladesh</h2>
+        <p class='text-gray-500'>Date: ${formattedDate} ${formattedTime} GMT +0600 (Bangladesh Standard Time)</p>
+        
+    
+    
+    `
 
     } else {
         alert('You do not have enough money to donate');
@@ -124,7 +127,7 @@ document.getElementById('quota-btn').addEventListener('click', function () {
     const myBalanceElement = document.getElementById('my-balance');
     const myBalance = parseFloat(myBalanceElement.innerText);
     const historyNew = document.createElement('div');
-    historyNew.className = 'border border-gray-400 rounded-lg shadow-lg p-4 h-[150px] flex flex-col justify-center space-y-3 mx-4 md:mx-0';
+
 
     const historyDiv = document.getElementById('history-section');
 
@@ -133,14 +136,7 @@ document.getElementById('quota-btn').addEventListener('click', function () {
     const formattedDate = currentDateTime.toLocaleDateString();
     const formattedTime = currentDateTime.toLocaleTimeString();
     const warning = document.getElementById('alert');
-    historyNew.innerHTML = `
-        
-        <h2 class='text-xl font-bold'> ${inputValue.toFixed(2)} Taka is Donated for famine-2024 at Quota Movement, Bangladesh</h2>
-        <p class='text-gray-500'>Date: ${formattedDate} ${formattedTime} GMT +0600 (Bangladesh Standard Time)</p>
-        
-    
-    
-    `
+   
     historyDiv.insertBefore(historyNew, historyDiv.firstChild);
 
 
@@ -151,6 +147,15 @@ document.getElementById('quota-btn').addEventListener('click', function () {
         const currentBalance = myBalance - inputValue;
         myBalanceElement.innerText = currentBalance.toFixed(2);
         congrats.classList.remove('hidden');
+        historyNew.className = 'border border-gray-400 rounded-lg shadow-lg p-4 h-[150px] flex flex-col justify-center space-y-3 mx-4 md:mx-0';
+        historyNew.innerHTML = `
+        
+        <h2 class='text-xl font-bold'> ${inputValue.toFixed(2)} Taka is Donated for famine-2024 at Quota Movement, Bangladesh</h2>
+        <p class='text-gray-500'>Date: ${formattedDate} ${formattedTime} GMT +0600 (Bangladesh Standard Time)</p>
+        
+    
+    
+    `
 
     } else {
         alert('You do not have enough money to donate');
